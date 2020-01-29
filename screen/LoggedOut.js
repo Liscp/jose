@@ -14,7 +14,11 @@ export default class LoggedOut extends Component {
           <Text style={styles.welcomeText}>
             Welcome to Airbnb Clone with React Native
           </Text>
-          <RoundedButton />
+          <RoundedButton 
+              text="Connect to Facebook" 
+              textColor={colors.green01}
+              backgroundColor={colors.white}
+          />
         </View>
       </View>
     );

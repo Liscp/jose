@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  KeyboardAvoidingView,
-  ScrollView,
-  StyleSheet
-} from "react-native";
+import { View, Text, KeyboardAvoidingView, ScrollView, StyleSheet } from "react-native";
 import colors from "../styles/color";
+import InputFiled from './form/InputFiled'
 export default class Login extends Component {
   render() {
     return (
@@ -14,6 +9,7 @@ export default class Login extends Component {
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.loginHeader}>Login</Text>
+            <InputFiled labelText='Email' />
           </ScrollView>
          </View>
        </KeyboardAvoidingView>

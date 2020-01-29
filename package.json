@@ -1,8 +1,8 @@
 {
-  "name": "github.com/liscp/jose",
+  "name": "jose",
   "version": "0.0.0",
   "description": "Liscp/jose @ Jan 29, 2020",
-  "author": null,
+  "author": "Lisbeth Caiza",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "devDependencies": {
@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "expo": "^36.0.0",
-    "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
-    "react-native-navigation": "^4.6.0"
+    "react-native-navigation": "^4.6.0",
+    "react-native-vector-icons": "^6.6.0"
   }
 }
