@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import {
   View,
@@ -9,6 +8,7 @@ import {
 } from "react-native";
 import InputField from "../components/form/InputFiled";
 import colors from "../src/style/index";
+import NextArrowButton from "../components/buttons/NextArrowButton";
 export default class Login extends Component {
   render() {
     return (
@@ -55,6 +55,7 @@ export default class Login extends Component {
               customStyle={{marginBottom:30}}
             />
           </ScrollView>
+          <NextArrowButton />
          </View>
        </KeyboardAvoidingView>
     );
