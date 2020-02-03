@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
-import LoggedOut from "./screen/LoggedOut";
-import Login from "./screen/Login"
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import Navigator from './rutas/login';
 export default class App extends Component {
   render() {
-    return <Login />;
+    return <Navigator />;
   }
 }
