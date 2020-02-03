@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { PropTypes } from "prop-types";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { TouchableHighlight, StyleSheet, Text, View } from "react-native";
+import { TouchableHighlight, StyleSheet, Text, View, Button } from "react-native";
 import colors from "../../src/style/index";
 
 export default class NextArrowButton extends Component {
@@ -9,12 +9,7 @@ export default class NextArrowButton extends Component {
     return (
       <View style={styles.buttonWrapper}>
         <TouchableHighlight style={[{ opacity: 0.6 }, styles.button]}>
-          <Icon
-            name="angle-right"
-            color={colors.green01}
-            size={32}
-            style={styles.icon}
-          />
+        <Text >Registrate</Text>
         </TouchableHighlight>
       </View>
     );
@@ -28,22 +23,18 @@ NextArrowButton.propTypes = {
 
 const styles = StyleSheet.create({
   buttonWrapper: {
-    alignItems: "flex-end",
-    right: 20,
-    bottom: 20,
+    alignItems: "center",
+    right: -2,
+    bottom: 100,
     paddingTop: 0
+    
   },
   button: {
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 50,
-    width: 60,
-    height: 60,
-    backgroundColor: colors.white
-  },
-  icon: {
-    marginRight: -2,
-    marginTop: -2
+    width: 150,
+    height: 80,
+    backgroundColor: colors.green02
   }
 });
 

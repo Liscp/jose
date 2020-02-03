@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  KeyboardAvoidingView,
-  ScrollView,
-  StyleSheet
-} from "react-native";
+import { PropTypes } from "prop-types";
+import { View, Text, ScrollView, StyleSheet, ImageBackground, TouchableHighlight } from "react-native";
 import InputField from "../components/form/InputFiled";
 import colors from "../src/style/index";
 import NextArrowButton from "../components/buttons/NextArrowButton";
 export default class Login extends Component {
   render() {
     return (
-      <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
+      <ImageBackground style={styles.wrapper} source={require('../img/fondo.jpg')} behavior="padding">
         <View style={styles.scrollViewWrapper, styles.avoidView}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.loginHeader}>Registrate</Text>
@@ -57,7 +52,7 @@ export default class Login extends Component {
           </ScrollView>
           <NextArrowButton />
          </View>
-       </KeyboardAvoidingView>
+       </ImageBackground>
     );
   }
 }
@@ -65,7 +60,6 @@ const styles = StyleSheet.create({
   wrapper: {
     display: "flex",
     flex: 1,
-    backgroundColor: colors.green01
   },
   scrollViewWrapper: {
     marginTop: 70,
@@ -82,5 +76,13 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontWeight: "300",
     marginBottom: 40
+  },
+  backgroundImage: {
+    position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        opacity: 0.3
   }
 });
