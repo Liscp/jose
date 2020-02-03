@@ -3,7 +3,6 @@ import { PropTypes } from "prop-types";
 import { View, Text, ScrollView, StyleSheet, ImageBackground, TouchableHighlight } from "react-native";
 import InputField from "../components/form/InputFiled";
 import colors from "../src/style/index";
-import NextArrowButton from "../components/buttons/NextArrowButton";
 export default class Login extends Component {
   render() {
     return (
@@ -50,12 +49,24 @@ export default class Login extends Component {
               customStyle={{marginBottom:30}}
             />
           </ScrollView>
-          <NextArrowButton />
-         </View>
+          <View style={styles.buttonWrapper}>
+            <TouchableHighlight onPress={(this.onLogin.bind(this))} style={[{ opacity: 0.6 }, styles.button]}>
+              <Text >Registrate</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
        </ImageBackground>
     );
   }
+  onLogin(){
+    console.log('Aplaste el login')
+  }
 }
+
+Login.propTypes = {
+  disabled: PropTypes.bool,
+  handleNextButton: PropTypes.func
+};
 const styles = StyleSheet.create({
   wrapper: {
     display: "flex",
@@ -84,5 +95,20 @@ const styles = StyleSheet.create({
         bottom: 0,
         right: 0,
         opacity: 0.3
+  },
+  buttonWrapper: {
+    alignItems: "center",
+    right: -2,
+    bottom: 100,
+    paddingTop: 0
+    
+  },
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    width: 150,
+    height: 80,
+    backgroundColor: colors.green02,
+    borderRadius: 15,
   }
 });
